@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>应用 DebianEdu/Skolelinux | meaium&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="重建 LTSP123456789root@tjener:~# debian-edu-ltsp --arch i386I: Retrieving InReleaseI: Retrieving ReleaseE: Failed getting release file http://deb.debian.org/debian/dists/stretch/Releaseerror: LTSP clien">
+<meta name="keywords" content="Debian,Educational">
+<meta property="og:type" content="article">
+<meta property="og:title" content="应用 DebianEdu&#x2F;Skolelinux">
+<meta property="og:url" content="http://yoursite.com/2019/01/31/31Jan19/index.html">
+<meta property="og:site_name" content="meaium&#39;s blog">
+<meta property="og:description" content="重建 LTSP123456789root@tjener:~# debian-edu-ltsp --arch i386I: Retrieving InReleaseI: Retrieving ReleaseE: Failed getting release file http://deb.debian.org/debian/dists/stretch/Releaseerror: LTSP clien">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-02-08T07:56:06.731Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="应用 DebianEdu&#x2F;Skolelinux">
+<meta name="twitter:description" content="重建 LTSP123456789root@tjener:~# debian-edu-ltsp --arch i386I: Retrieving InReleaseI: Retrieving ReleaseE: Failed getting release file http://deb.debian.org/debian/dists/stretch/Releaseerror: LTSP clien">
+  
+    <link rel="alternate" href="/atom.xml" title="meaium&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">meaium&#39;s blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-31Jan19" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/31/31Jan19/" class="article-date">
+  <time datetime="2019-01-30T17:12:06.000Z" itemprop="datePublished">2019-01-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      应用 DebianEdu/Skolelinux
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="重建-LTSP"><a href="#重建-LTSP" class="headerlink" title="重建 LTSP"></a>重建 LTSP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">root@tjener:~<span class="comment"># debian-edu-ltsp --arch i386</span></span><br><span class="line">I: Retrieving InRelease</span><br><span class="line">I: Retrieving Release</span><br><span class="line">E: Failed getting release file http://deb.debian.org/debian/dists/stretch/Release</span><br><span class="line">error: LTSP client installation ended abnormally</span><br><span class="line">chroot: failed to run <span class="built_in">command</span> <span class="string">'/usr/share/debconf/fix_db.pl'</span>: No such file or directory</span><br><span class="line">chroot: failed to run <span class="built_in">command</span> <span class="string">'dpkg'</span>: No such file or directory</span><br><span class="line">Updating /var/lib/tftpboot directories <span class="keyword">for</span> chroot: i386</span><br><span class="line">No LTSP chroots found, please run ltsp-build-client</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">root@tjener:~<span class="comment"># ltsp-build-client</span></span><br><span class="line">info: Missing LTSP dist value, setting to stretch</span><br><span class="line">NOTE: adding default dist and components to security mirror:</span><br><span class="line">http://security.debian.org/ stretch/updates main</span><br><span class="line">I: Retrieving InRelease</span><br><span class="line">I: Retrieving Release</span><br><span class="line">E: Failed getting release file http://deb.debian.org/debian/dists/stretch/Release</span><br><span class="line">error: LTSP client installation ended abnormally</span><br></pre></td></tr></table></figure>
+<p>参阅 <a href="https://wiki.debian.org/DebianEdu/Documentation/Stretch/Upgrades#Recreating_an_LTSP_chroot" target="_blank" rel="noopener">DebiabEdu/Skolelinux 中的 LTSP 重建</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/31/31Jan19/" data-id="cjrvrnbk50000x7s668b0eh44" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Educational/">Educational</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Debian/">Debian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Educational/">Educational</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Debian/" style="font-size: 10px;">Debian</a> <a href="/tags/Educational/" style="font-size: 10px;">Educational</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/31/31Jan19/">应用 DebianEdu/Skolelinux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Ma Yong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
