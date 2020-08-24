@@ -62,6 +62,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-24Aug20a" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/24/24Aug20a/" class="article-date">
+  <time datetime="2020-08-24T05:04:09.000Z" itemprop="datePublished">2020-08-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/24/24Aug20a/">24Aug20a</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line"># kvm -m 1024 -hda debian-980.img -hdb drbd1.img -net nic,macaddr=52:54:00:12:34:57 -net tap,ifname=tap0,script=no,downscript=no -nographic &amp;</span><br><span class="line"></span><br><span class="line"># sleep 60</span><br><span class="line"></span><br><span class="line">kvm -m 1024 -hda debian-mediawiki.img -hdb drbd0.img -net nic,macaddr=52:54:00:12:34:58 -net tap,ifname=tap1,script=no,downscript=no -nographic &amp;</span><br><span class="line"># WARNING: Image format was not specified for &apos;debian-mediawiki.img&apos; and probing guessed raw.</span><br><span class="line">#          Automatically detecting the format is dangerous for raw images, write operations on block 0 will be restricted.</span><br><span class="line">#          Specify the &apos;raw&apos; format explicitly to remove the restrictions.</span><br><span class="line"># [ 6264.678477] kvm [3141]: vcpu0, guest rIP: 0xffffffff96a5b624 disabled perfctr wrmsr: 0xc2 data 0xffff</span><br><span class="line"></span><br><span class="line">sleep 60</span><br><span class="line"></span><br><span class="line">kvm -m 1024 -hda debian-php.img -net nic,macaddr=52:54:00:12:34:59 -net tap,ifname=tap2,script=no,downscript=no -nographic &amp;</span><br><span class="line"></span><br><span class="line"># sleep 60</span><br><span class="line"></span><br><span class="line"># kvm -m 1024 -hda FreeSWITCH.img -net nic,macaddr=52:54:00:12:34:60 -net tap,ifname=tap3,script=no,downscript=no -nographic &amp;</span><br><span class="line"></span><br><span class="line"># sleep 60</span><br><span class="line"></span><br><span class="line"># kvm -m 1024 -hda openwrt-18.06.2-x86-64-combined-ext4.img -net nic,macaddr=52:54:00:12:34:61,vlan=10 -net tap,ifname=tap4,vlan=10,script=no,downscript=no -net nic,macaddr=52:54:00:12:34:62,vlan=20 -net tap,ifname=tap5,vlan=20,script=no,downscript=no -nographic &amp;</span><br><span class="line"></span><br><span class="line"># sleep 60</span><br><span class="line"></span><br><span class="line"># kvm -m 1024 -hda Win7.img~ -net nic,macaddr=52:54:00:12:34:63 -net tap,ifname=tap6,script=no,downscript=no -nographic &amp;</span><br><span class="line"></span><br><span class="line"># sleep 60</span><br><span class="line"></span><br><span class="line"># kvm -m 1024 -hda debian-hurd-2019.img -net nic,macaddr=52:54:00:12:34:64 -net tap,ifname=tap7,script=no,downscript=no -nographic &amp;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/24/24Aug20a/" data-id="cke82bh5i0000bps6u0qj654w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-24Aug20" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/08/24/24Aug20/" class="article-date">
@@ -89,7 +128,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/24/24Aug20/" data-id="cke8185ha0001z8s6549tsex1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/24/24Aug20/" data-id="cke82bh6c0001bps67ua4l83e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -128,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/01/1Aug20/" data-id="cke8185ga0000z8s6dvjavr54" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/01/1Aug20/" data-id="cke82bh7k0005bps63nog78mx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -168,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/28/28Jul20/" data-id="cke8185i10003z8s6o8abfhsa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/28/28Jul20/" data-id="cke82bh700003bps6w1xk62zv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -212,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/31/31Jan19/" data-id="cke8185ib0004z8s6mc778fpa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/31/31Jan19/" data-id="cke82bh7d0004bps64r9gt04f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Educational/">Educational</a></li></ul>
@@ -267,6 +306,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/08/24/24Aug20a/">24Aug20a</a>
+          </li>
         
           <li>
             <a href="/2020/08/24/24Aug20/">24Aug20</a>
