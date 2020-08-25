@@ -62,6 +62,43 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-25Aug20c" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/25/25Aug20c/" class="article-date">
+  <time datetime="2020-08-25T03:47:33.000Z" itemprop="datePublished">2020-08-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/25/25Aug20c/">25Aug20c</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line">= PostgreSQL =</span><br><span class="line"></span><br><span class="line">&lt;&lt;TableOfContents(4)&gt;&gt;</span><br><span class="line"></span><br><span class="line">== 启用网络/远程用户访问 ==</span><br><span class="line"></span><br><span class="line">在 postgresql.conf 中添加/编辑一下行：</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">listen_addresses = &apos;*&apos;</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">在 pg_hba.conf 中编辑如下行，允许所有用户使用加密的密码访问所有数据库：</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line"># TYPE	DATABASE	USER	CIDR-ADDRESS	METHOD</span><br><span class="line">host	all		all	0.0.0.0/0	md5</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">重启 PostgreSQL 服务。</span><br><span class="line"></span><br><span class="line">== 使用 psql 访问 ==</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">psql -h 10.0.100.2 -p 5432 -d ljzt_db -U meaium</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">== 为用户创建数据库 ==</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">postgres=# CREATE DATABASE xxxx_db OWNER = meaium;</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">== 数据库中有多少张表 ==</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">xxxx_db=&gt; SELECT count(*) FROM information_schema.tables</span><br><span class="line">xxxx_db-&gt; WHERE table_schema NOT IN (&apos;information_schema&apos;,</span><br><span class="line">xxxx_db(&gt; &apos;pg_catalog&apos;);</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">== 数据表 ==</span><br><span class="line"></span><br><span class="line">=== 创建数据表 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">CREATE TABLE tb_出库单</span><br><span class="line">(</span><br><span class="line">序号 INT NOT NULL PRIMARY KEY,</span><br><span class="line">日期 DATE,</span><br><span class="line">单号 INT,</span><br><span class="line">品名 TEXT,</span><br><span class="line">规格 TEXT</span><br><span class="line">);</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">=== 添加主键 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">ALTER TABLE tb_出库单 ADD PRIMARY KEY(出库编号);</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">=== 创建外键约束 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">ALTER TABLE tb_入库单 ADD FOREIGN KEY (出库编号) REFERENCES tb_出库单;</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">=== 设施字段约束 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">ALTER TABLE tb_出库单 ALTER COLUMN 出库编号 SET NOT NULL;</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">=== 添加无完整性约束条件的字段 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">ALTER TABLE tb_出库单 ADD COLUMN 销货单价 NUMERIC (9,2);</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">=== 修改数据类型保持不变的字段名 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">ALTER TABLE tb_出库单 RENAME 单位 TO 购方;</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">=== 修改字段的数据类型 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">ALTER TABLE tb_出库单 ALTER COLUMN 入库编号 TYPE TEXT;</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">=== 删除字段 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">ALTER TABLE tb_出库单 DROP 序号;</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">=== 查看表中数据 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">SELECT * FROM tb_出库单;</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">SELECT 编号,供货商,供货品种,数量,单价,出库编号 FROM tb_入库单;</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">== 数据的插入、更新与删除 ==</span><br><span class="line"></span><br><span class="line">=== 为表的指定字段插入数据 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">INSERT INTO tb_出库单 (日期,单号,品名,规格,购方,单位,销货数量,销货单价,出库编号)</span><br><span class="line">VALUES (&apos;20190409&apos;,3474,&apos;飞鱼星千兆路由器&apos;,&apos;VE1260G&apos;,&apos;金润&apos;,&apos;台&apos;,1,850,14);</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">=== 更新数据 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">UPDATE tb_出库单 SET 出库编号=9 WHERE 品名=&apos;打印机&apos;;</span><br><span class="line">&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">=== 删除数据 ===</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#123;</span><br><span class="line">DELETE FROM tb_出库单 WHERE 出库编号=2;</span><br><span class="line">&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/25/25Aug20c/" data-id="cke9ey0zh0004ems6i7kj30ka" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-25Aug20b" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/08/25/25Aug20b/" class="article-date">
@@ -89,7 +126,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/25/25Aug20b/" data-id="cke9ek4ci000546s6m0veak6i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/25/25Aug20b/" data-id="cke9ey10k0009ems6etvjts2r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,7 +163,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/25/25Aug20a/" data-id="cke9ek4dd000946s6a6akmokt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/25/25Aug20a/" data-id="cke9ey10b0008ems6r7d17bds" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,7 +200,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/25/25Aug20/" data-id="cke9ek4c8000446s64114jb4i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/25/25Aug20/" data-id="cke9ey0zq0005ems6lot9yqe5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -200,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/24/24Aug20a/" data-id="cke9ek4bv000346s64b6iitxi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/24/24Aug20a/" data-id="cke9ey0z60003ems6w4ktffgf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -239,7 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/24/24Aug20/" data-id="cke9ek4az000146s6i1yab8wl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/24/24Aug20/" data-id="cke9ey0yc0001ems6zefl20fz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -278,7 +315,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/01/1Aug20/" data-id="cke9ek49q000046s6bj4wfy9g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/01/1Aug20/" data-id="cke9ey0x50000ems65x6uda6k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -318,7 +355,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/28/28Jul20/" data-id="cke9ek4d3000846s6s0mwt0dg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/28/28Jul20/" data-id="cke9ey10y000cems6wbqt68by" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -362,7 +399,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/31/31Jan19/" data-id="cke9ek4dr000c46s6ac98ktq9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/31/31Jan19/" data-id="cke9ey117000dems6vqqwszmz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Educational/">Educational</a></li></ul>
@@ -419,6 +456,10 @@
       <ul>
         
           <li>
+            <a href="/2020/08/25/25Aug20c/">25Aug20c</a>
+          </li>
+        
+          <li>
             <a href="/2020/08/25/25Aug20b/">25Aug20b</a>
           </li>
         
@@ -432,10 +473,6 @@
         
           <li>
             <a href="/2020/08/24/24Aug20a/">24Aug20a</a>
-          </li>
-        
-          <li>
-            <a href="/2020/08/24/24Aug20/">24Aug20</a>
           </li>
         
       </ul>
