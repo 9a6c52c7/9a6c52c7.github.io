@@ -62,6 +62,48 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-3Sep20" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/03/3Sep20/" class="article-date">
+  <time datetime="2020-09-03T02:56:04.000Z" itemprop="datePublished">2020-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/03/3Sep20/">3Sep20</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/db.ljzt-ltd.net</span><br><span class="line">#$TTL    3600</span><br><span class="line">#ljzt-ltd.net.       IN      SOA     debian.ljzt-ltd.net. root.ljzt-ltd.net. (</span><br><span class="line">#                            1           ; Serial</span><br><span class="line">#                         3600           ; Refresh [1h]</span><br><span class="line">#                         1800           ; Retry   [10m]</span><br><span class="line">#                       720000           ; Expire  [1d]</span><br><span class="line">#                         6400 )         ; Negative Cache TTL [1h]</span><br><span class="line">#		MX      10 debian.ljzt-ltd.net.</span><br><span class="line">#		NS      debian.ljzt-ltd.net.</span><br><span class="line">#_ldap._tcp	SRV	0 100 389 exper0.ljzt-ltd.net.</span><br><span class="line">#debian		A       192.168.0.16</span><br><span class="line">#exper0		A	192.168.0.20</span><br><span class="line"></span><br><span class="line"># or</span><br><span class="line">$TTL 500</span><br><span class="line">@		IN	SOA	exper0.ljzt-ltd.net. root.ljzt-ltd.net. (</span><br><span class="line">				1 ; Serialnumber</span><br><span class="line">				3600	; Refresh</span><br><span class="line">				1800	; Retry</span><br><span class="line">				720000	; Expire</span><br><span class="line">				6400 )	; Minimum TTL</span><br><span class="line">			MX	10 exper0.ljzt-ltd.net.</span><br><span class="line">			NS	exper0.ljzt-ltd.net.</span><br><span class="line">_ldap._tcp              SRV     0 100 389 exper0.ljzt-ltd.net.</span><br><span class="line">exper0			A	192.168.0.20</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/db.0.168.192.in-addr.arpa.</span><br><span class="line">$TTL 500</span><br><span class="line">@		IN	SOA	exper0.ljzt-ltd.net. root.ljzt-ltd.net. (</span><br><span class="line">				1 ; Serialnumber</span><br><span class="line">				3600	; Refresh</span><br><span class="line">				1800	; Retry</span><br><span class="line">				720000	; Expire</span><br><span class="line">				6400 )	; Minimum TTL</span><br><span class="line">			MX	10 exper0.ljzt-ltd.net.</span><br><span class="line">			NS	exper0.ljzt-ltd.net.</span><br><span class="line">20			PTR	exper0.ljzt-ltd.net.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/named.conf.local</span><br><span class="line">//</span><br><span class="line">// Do any local configuration here</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">// Consider adding the 1918 zones here, if they are not used in your</span><br><span class="line">// organization</span><br><span class="line">//include &quot;/etc/bind/zones.rfc1918&quot;;</span><br><span class="line">include &quot;/etc/bind/named.conf.zone&quot;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/named.conf.zone</span><br><span class="line">zone &quot;0.168.192.in-addr.arpa.&quot; &#123;</span><br><span class="line">	type master;</span><br><span class="line">	notify yes;</span><br><span class="line">	file &quot;/etc/bind/db.0.168.192.in-addr.arpa.&quot;;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line">zone &quot;10.in-addr.arpa.&quot; &#123;</span><br><span class="line">	type master;</span><br><span class="line">	notify yes;</span><br><span class="line">	file &quot;/etc/bind/db.10.in-addr.arpa.&quot;;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line">zone &quot;intern&quot; &#123;</span><br><span class="line">	type master;</span><br><span class="line">	notify yes;</span><br><span class="line">	file &quot;/etc/bind/db.intern&quot;;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line">zone &quot;ljzt-ltd.net&quot; &#123;</span><br><span class="line">	type master;</span><br><span class="line">	notify yes;</span><br><span class="line">	file &quot;/etc/bind/db.ljzt-ltd.net&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/db.intern</span><br><span class="line">$TTL 500</span><br><span class="line">@		IN	SOA	tjener.intern. root.tjener.intern. (</span><br><span class="line">				1 ; Serialnumber</span><br><span class="line">				3600	; Refresh</span><br><span class="line">				1800	; Retry</span><br><span class="line">				720000	; Expire</span><br><span class="line">				6400 )	; Minimum TTL</span><br><span class="line">			MX	10 tjener.intern.</span><br><span class="line">			NS	tjener.intern.</span><br><span class="line">_kerberos-adm._tcp		SRV	100 0 749 tjener.intern.</span><br><span class="line">_kerberos-master._udp		SRV	100 0 88 tjener.intern.</span><br><span class="line">_kerberos._udp		SRV	100 0 88 tjener.intern.</span><br><span class="line">_kerberos		TXT	&quot;INTERN&quot;</span><br><span class="line">_kpasswd._tcp		SRV	100 0 464 tjener.intern.</span><br><span class="line">_syslog._udp		SRV	100 0 514 tjener.intern.</span><br><span class="line">_ldap._tcp		SRV	100 0 389 tjener.intern.</span><br><span class="line">backup			CNAME	tjener.intern.</span><br><span class="line">bootps			CNAME	tjener.intern.</span><br><span class="line">cfengine		CNAME	tjener.intern.</span><br><span class="line">db			CNAME	tjener.intern.</span><br><span class="line">domain			CNAME	tjener.intern.</span><br><span class="line">gateway			A	10.0.0.1</span><br><span class="line">homes			CNAME	tjener.intern.</span><br><span class="line">ipp			CNAME	tjener.intern.</span><br><span class="line">kerberos		CNAME	tjener.intern.</span><br><span class="line">ldap			CNAME	tjener.intern.</span><br><span class="line">ltsp			CNAME	tjener.intern.</span><br><span class="line">ns			CNAME	tjener.intern.</span><br><span class="line">ntp			CNAME	tjener.intern.</span><br><span class="line">postoffice		CNAME	tjener.intern.</span><br><span class="line">sitesummary		CNAME	tjener.intern.</span><br><span class="line">ssh			CNAME	tjener.intern.</span><br><span class="line">syslog			CNAME	tjener.intern.</span><br><span class="line">tjener			A	10.0.2.2</span><br><span class="line">webcache		CNAME	tjener.intern.</span><br><span class="line">wpad			CNAME	tjener.intern.</span><br><span class="line">www			CNAME	tjener.intern.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/db.10.in-addr.arpa.</span><br><span class="line">$TTL 500</span><br><span class="line">@		IN	SOA	tjener.intern. root.tjener.intern. (</span><br><span class="line">				1 ; Serialnumber</span><br><span class="line">				3600	; Refresh</span><br><span class="line">				1800	; Retry</span><br><span class="line">				720000	; Expire</span><br><span class="line">				6400 )	; Minimum TTL</span><br><span class="line">			MX	10 tjener.intern.</span><br><span class="line">			NS	tjener.intern.</span><br><span class="line">1.0.0			PTR	gateway.intern.</span><br><span class="line">2.2.0			PTR	tjener.intern.</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/09/03/3Sep20/" data-id="ckem9hanj000cgcs6qfcitwxm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-25Aug20c" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/08/25/25Aug20c/" class="article-date">
@@ -89,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/25/25Aug20c/" data-id="cke9ey0zh0004ems6i7kj30ka" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/25/25Aug20c/" data-id="ckem9han60009gcs6hba2bs8u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/25/25Aug20b/" data-id="cke9ey10k0009ems6etvjts2r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/25/25Aug20b/" data-id="ckem9hamx0008gcs6mfs3fzbn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,7 +205,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/25/25Aug20a/" data-id="cke9ey10b0008ems6r7d17bds" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/25/25Aug20a/" data-id="ckem9hame0005gcs6ive0oiwm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -200,7 +242,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/25/25Aug20/" data-id="cke9ey0zq0005ems6lot9yqe5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/25/25Aug20/" data-id="ckem9ham50004gcs6be5t49t0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -237,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/24/24Aug20a/" data-id="cke9ey0z60003ems6w4ktffgf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/24/24Aug20a/" data-id="ckem9halw0003gcs6zh1r8om4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -276,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/24/24Aug20/" data-id="cke9ey0yc0001ems6zefl20fz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/24/24Aug20/" data-id="ckem9hal60001gcs6c4fwb7uu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -315,7 +357,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/01/1Aug20/" data-id="cke9ey0x50000ems65x6uda6k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/01/1Aug20/" data-id="ckem9hak90000gcs6kdfk9573" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -355,7 +397,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/28/28Jul20/" data-id="cke9ey10y000cems6wbqt68by" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/28/28Jul20/" data-id="ckem9hans000dgcs6g8vrbv1h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li></ul>
@@ -399,7 +441,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/31/31Jan19/" data-id="cke9ey117000dems6vqqwszmz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/31/31Jan19/" data-id="ckem9hao2000fgcs6zvxm5dxy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Educational/">Educational</a></li></ul>
@@ -443,7 +485,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
     </div>
   </div>
 
@@ -454,6 +496,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/09/03/3Sep20/">3Sep20</a>
+          </li>
         
           <li>
             <a href="/2020/08/25/25Aug20c/">25Aug20c</a>
@@ -469,10 +515,6 @@
         
           <li>
             <a href="/2020/08/25/25Aug20/">25Aug20</a>
-          </li>
-        
-          <li>
-            <a href="/2020/08/24/24Aug20a/">24Aug20a</a>
           </li>
         
       </ul>

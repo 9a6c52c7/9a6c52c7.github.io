@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>3Sep20 | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1234567891011121314151617181920212223242526#cat /etc/bind/db.ljzt-ltd.net#$TTL    3600#ljzt-ltd.net.       IN      SOA     debian.ljzt-ltd.net. root.ljzt-ltd.net. (#                            1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3Sep20">
+<meta property="og:url" content="http://yoursite.com/2020/09/03/3Sep20/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="1234567891011121314151617181920212223242526#cat /etc/bind/db.ljzt-ltd.net#$TTL    3600#ljzt-ltd.net.       IN      SOA     debian.ljzt-ltd.net. root.ljzt-ltd.net. (#                            1">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2020-09-03T03:39:48.681Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3Sep20">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526#cat /etc/bind/db.ljzt-ltd.net#$TTL    3600#ljzt-ltd.net.       IN      SOA     debian.ljzt-ltd.net. root.ljzt-ltd.net. (#                            1">
+  
+    <link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo"></a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-3Sep20" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/03/3Sep20/" class="article-date">
+  <time datetime="2020-09-03T02:56:04.000Z" itemprop="datePublished">2020-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      3Sep20
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/db.ljzt-ltd.net</span><br><span class="line">#$TTL    3600</span><br><span class="line">#ljzt-ltd.net.       IN      SOA     debian.ljzt-ltd.net. root.ljzt-ltd.net. (</span><br><span class="line">#                            1           ; Serial</span><br><span class="line">#                         3600           ; Refresh [1h]</span><br><span class="line">#                         1800           ; Retry   [10m]</span><br><span class="line">#                       720000           ; Expire  [1d]</span><br><span class="line">#                         6400 )         ; Negative Cache TTL [1h]</span><br><span class="line">#		MX      10 debian.ljzt-ltd.net.</span><br><span class="line">#		NS      debian.ljzt-ltd.net.</span><br><span class="line">#_ldap._tcp	SRV	0 100 389 exper0.ljzt-ltd.net.</span><br><span class="line">#debian		A       192.168.0.16</span><br><span class="line">#exper0		A	192.168.0.20</span><br><span class="line"></span><br><span class="line"># or</span><br><span class="line">$TTL 500</span><br><span class="line">@		IN	SOA	exper0.ljzt-ltd.net. root.ljzt-ltd.net. (</span><br><span class="line">				1 ; Serialnumber</span><br><span class="line">				3600	; Refresh</span><br><span class="line">				1800	; Retry</span><br><span class="line">				720000	; Expire</span><br><span class="line">				6400 )	; Minimum TTL</span><br><span class="line">			MX	10 exper0.ljzt-ltd.net.</span><br><span class="line">			NS	exper0.ljzt-ltd.net.</span><br><span class="line">_ldap._tcp              SRV     0 100 389 exper0.ljzt-ltd.net.</span><br><span class="line">exper0			A	192.168.0.20</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/db.0.168.192.in-addr.arpa.</span><br><span class="line">$TTL 500</span><br><span class="line">@		IN	SOA	exper0.ljzt-ltd.net. root.ljzt-ltd.net. (</span><br><span class="line">				1 ; Serialnumber</span><br><span class="line">				3600	; Refresh</span><br><span class="line">				1800	; Retry</span><br><span class="line">				720000	; Expire</span><br><span class="line">				6400 )	; Minimum TTL</span><br><span class="line">			MX	10 exper0.ljzt-ltd.net.</span><br><span class="line">			NS	exper0.ljzt-ltd.net.</span><br><span class="line">20			PTR	exper0.ljzt-ltd.net.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/named.conf.local</span><br><span class="line">//</span><br><span class="line">// Do any local configuration here</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">// Consider adding the 1918 zones here, if they are not used in your</span><br><span class="line">// organization</span><br><span class="line">//include &quot;/etc/bind/zones.rfc1918&quot;;</span><br><span class="line">include &quot;/etc/bind/named.conf.zone&quot;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/named.conf.zone</span><br><span class="line">zone &quot;0.168.192.in-addr.arpa.&quot; &#123;</span><br><span class="line">	type master;</span><br><span class="line">	notify yes;</span><br><span class="line">	file &quot;/etc/bind/db.0.168.192.in-addr.arpa.&quot;;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line">zone &quot;10.in-addr.arpa.&quot; &#123;</span><br><span class="line">	type master;</span><br><span class="line">	notify yes;</span><br><span class="line">	file &quot;/etc/bind/db.10.in-addr.arpa.&quot;;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line">zone &quot;intern&quot; &#123;</span><br><span class="line">	type master;</span><br><span class="line">	notify yes;</span><br><span class="line">	file &quot;/etc/bind/db.intern&quot;;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line">zone &quot;ljzt-ltd.net&quot; &#123;</span><br><span class="line">	type master;</span><br><span class="line">	notify yes;</span><br><span class="line">	file &quot;/etc/bind/db.ljzt-ltd.net&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/db.intern</span><br><span class="line">$TTL 500</span><br><span class="line">@		IN	SOA	tjener.intern. root.tjener.intern. (</span><br><span class="line">				1 ; Serialnumber</span><br><span class="line">				3600	; Refresh</span><br><span class="line">				1800	; Retry</span><br><span class="line">				720000	; Expire</span><br><span class="line">				6400 )	; Minimum TTL</span><br><span class="line">			MX	10 tjener.intern.</span><br><span class="line">			NS	tjener.intern.</span><br><span class="line">_kerberos-adm._tcp		SRV	100 0 749 tjener.intern.</span><br><span class="line">_kerberos-master._udp		SRV	100 0 88 tjener.intern.</span><br><span class="line">_kerberos._udp		SRV	100 0 88 tjener.intern.</span><br><span class="line">_kerberos		TXT	&quot;INTERN&quot;</span><br><span class="line">_kpasswd._tcp		SRV	100 0 464 tjener.intern.</span><br><span class="line">_syslog._udp		SRV	100 0 514 tjener.intern.</span><br><span class="line">_ldap._tcp		SRV	100 0 389 tjener.intern.</span><br><span class="line">backup			CNAME	tjener.intern.</span><br><span class="line">bootps			CNAME	tjener.intern.</span><br><span class="line">cfengine		CNAME	tjener.intern.</span><br><span class="line">db			CNAME	tjener.intern.</span><br><span class="line">domain			CNAME	tjener.intern.</span><br><span class="line">gateway			A	10.0.0.1</span><br><span class="line">homes			CNAME	tjener.intern.</span><br><span class="line">ipp			CNAME	tjener.intern.</span><br><span class="line">kerberos		CNAME	tjener.intern.</span><br><span class="line">ldap			CNAME	tjener.intern.</span><br><span class="line">ltsp			CNAME	tjener.intern.</span><br><span class="line">ns			CNAME	tjener.intern.</span><br><span class="line">ntp			CNAME	tjener.intern.</span><br><span class="line">postoffice		CNAME	tjener.intern.</span><br><span class="line">sitesummary		CNAME	tjener.intern.</span><br><span class="line">ssh			CNAME	tjener.intern.</span><br><span class="line">syslog			CNAME	tjener.intern.</span><br><span class="line">tjener			A	10.0.2.2</span><br><span class="line">webcache		CNAME	tjener.intern.</span><br><span class="line">wpad			CNAME	tjener.intern.</span><br><span class="line">www			CNAME	tjener.intern.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/bind/db.10.in-addr.arpa.</span><br><span class="line">$TTL 500</span><br><span class="line">@		IN	SOA	tjener.intern. root.tjener.intern. (</span><br><span class="line">				1 ; Serialnumber</span><br><span class="line">				3600	; Refresh</span><br><span class="line">				1800	; Retry</span><br><span class="line">				720000	; Expire</span><br><span class="line">				6400 )	; Minimum TTL</span><br><span class="line">			MX	10 tjener.intern.</span><br><span class="line">			NS	tjener.intern.</span><br><span class="line">1.0.0			PTR	gateway.intern.</span><br><span class="line">2.2.0			PTR	tjener.intern.</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/09/03/3Sep20/" data-id="ckem9hanj000cgcs6qfcitwxm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/25/25Aug20c/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">25Aug20c</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Debian/">Debian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Educational/">Educational</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Debian/" style="font-size: 20px;">Debian</a> <a href="/tags/Educational/" style="font-size: 10px;">Educational</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/09/03/3Sep20/">3Sep20</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/25/25Aug20c/">25Aug20c</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/25/25Aug20b/">25Aug20b</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/25/25Aug20a/">25Aug20a</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/25/25Aug20/">25Aug20</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Ma Yong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
